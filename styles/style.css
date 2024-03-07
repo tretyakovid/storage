@@ -139,15 +139,15 @@ table {
   border-spacing: 0;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   box-sizing: content-box;
@@ -166,8 +166,8 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
+  display: inline;
+  zoom: 1;
   max-width: 100%;
 }
 
@@ -256,7 +256,7 @@ legend {
   border: 0; /* 1 */
   padding: 0;
   white-space: normal; /* 2 */
-  *margin-left: -7px; /* 3 */
+  margin-left: -7px; /* 3 */
 }
 
 /**
@@ -272,7 +272,7 @@ textarea {
   font-size: 100%; /* 1 */
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
-  *vertical-align: middle; /* 3 */
+  vertical-align: middle; /* 3 */
 }
 
 /**
@@ -305,12 +305,12 @@ select {
  *    Known issue: inner spacing remains in IE 6.
  */
 button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  *overflow: visible; /* 4 */
+  overflow: visible; /* 4 */
 }
 
 /**
@@ -327,12 +327,12 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  *height: 13px; /* 3 */
-  *width: 13px; /* 3 */
+  height: 13px; /* 3 */
+  width: 13px; /* 3 */
 }
 
 /**
@@ -340,7 +340,7 @@ input[type=radio] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: textfield; /* 1 */ /* 2 */
   box-sizing: content-box;
 }
@@ -349,8 +349,8 @@ input[type=search] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -520,7 +520,7 @@ body {
   width: 32px;
   height: 32px;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   border-radius: 50%;
 }
 
@@ -695,13 +695,16 @@ body {
   align-items: center;
   gap: 3px;
 }
-.content__file-item-menu-delete-btn, .content__file-item-menu-download-link {
+.content__file-item-menu-delete-btn,
+.content__file-item-menu-download-link {
   transition: 0.2s;
 }
-.content__file-item-menu-delete-btn:active, .content__file-item-menu-download-link:active {
+.content__file-item-menu-delete-btn:active,
+.content__file-item-menu-download-link:active {
   transform: translateY(2px);
 }
-.content__file-item-menu-delete-btn:hover, .content__file-item-menu-download-link:hover {
+.content__file-item-menu-delete-btn:hover,
+.content__file-item-menu-download-link:hover {
   filter: brightness(0.5);
 }
 
@@ -903,7 +906,8 @@ body {
 .popup__upload:hover .popup__upload-icon {
   stroke: #7f56d9;
 }
-.popup__confirm-btn:active, .popup__cancel-btn:active {
+.popup__confirm-btn:active,
+.popup__cancel-btn:active {
   transform: translateY(2px);
 }
 .popup__confirm-btn {
@@ -1074,4 +1078,4 @@ body {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
