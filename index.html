@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="/" class="header__logo-link">
+        <img src="./assets/img/logo.png" alt="Disk" class="header__logo" />
+        <span class="header__logo-title">Storage Drive</span>
+      </a>
+      <form class="header__search-form">
+        <input type="text" placeholder="Search Files" class="header__input" />
+      </form>
+      <a href="/profile" class="header__profile-link">
+        <img src="./assets/img/avatar.jpg" alt="John Smith" class="header__profile-avatar" />
+      </a>
+    </div>
+  </header>
+  <main class="main">
+    <div class="sidebar">
+      <ul class="sidebar__page-list">
+        <li class="sidebar__page-list-item">
+          <a href="#" class="sidebar__page-item-link">
+            <img class="sidebar__item-icon" src="./assets/icons/star.png" alt="star" />
+            <span class="sidebar__page-item-title"> Starred </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="content__header">
+        <h2 class="content__heading">Files</h2>
+        <div class="content__right-group">
+          <a href="#" class="content__file-item-menu-reload">
+            <img class="content__file-item-menu-reload-icon" src="./assets/icons/reload.svg" alt="reload" />
+          </a>
+          <button class="content__add-btn">
+            <span class="content__add-btn-title">ADD FILE</span>
+            <div class="content__add-btn-icon">
+              <svg width="16px" height="16px" enable-background="new 0 0 512 512" fill="#6b6c7e" version="1.1"
+                viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m256 512c-141.38 0-256-114.61-256-256s114.62-256 256-256c141.39 0 256 114.61 256 256s-114.61 256-256 256zm0-448c-106.03 0-192 85.969-192 192s85.969 192 192 192c106.05 0 192-85.969 192-192s-85.953-192-192-192zm32 320h-64v-96h-96v-64h96v-96h64v96h96v64h-96v96z" />
+              </svg>
+
+            </div>
+          </button>
+        </div>
+      </div>
+      <ul class="content__files-list">
+        <div class="content__files-list-header">
+          <button class="content__files-list-filter-btn">
+            <span class="content__files-list-filter-btn-title content__files-list-title">Name</span>
+            <svg fill="#6b6c7e" width="14px" height="14px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.993 15.993" xml:space="preserve">
+              <g>
+                <path d="M12.703,4.285l-4-3.992c-0.391-0.39-1.022-0.39-1.413,0l-4,3.992l1.413,1.416l2.294-2.289v12.581h2V3.412l2.293,2.289
+		L12.703,4.285z" />
+              </g>
+            </svg>
+          </button>
+          <span class="content__files-list-title content__files-list-filter-title--downloads">
+            Downloads
+          </span>
+          <span class="content__files-list-title content__files-list-filter-title--last-moidified">
+            Last Modifited
+          </span>
+        </div>
+      </ul>
+    </div>
+  </main>
+  <div class="context-menu" id="context-menu">
+    <button class="context-menu__add-btn context-menu__btn">
+      <svg enable-background="new 0 0 512 512" width="16px" height="16px" version="1.1" fill="#6b6c7e"
+        viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path
+          d="M256,512C114.625,512,0,397.391,0,256C0,114.609,114.625,0,256,0c141.391,0,256,114.609,256,256  C512,397.391,397.391,512,256,512z M256,64C149.969,64,64,149.969,64,256s85.969,192,192,192c106.047,0,192-85.969,192-192  S362.047,64,256,64z M288,384h-64v-96h-96v-64h96v-96h64v96h96v64h-96V384z">
+        </path>
+      </svg>
+      <span class="context-menu__add-btn-title context-menu__btn-title">Add File</span>
+    </button>
+  </div>
+  <div id="upload-popup" class="popup-window">
+    <div class="popup popup-upload">
+      <button class="popup__close-btn">&#10006;</button>
+      <h2 class="popup__heading popup__heading--black">
+        Upload and attach files
+      </h2>
+      <h3 class="popup__subheading">
+        Upload and attach files to this project.
+      </h3>
+      <div class="popup__file-information">
+        <input class="popup__input" id="title-file" type="text" name="title-file" placeholder="File name" focus />
+        <div class="popup__dropdown">
+          <div class="popup__dropdown-select">
+            <span>Choose language</span>
+            <svg id="up-icon" height="25px" style="enable-background: new 0 0 512 512" version="1.1"
+              viewBox="0 0 512 512" width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon points="396.6,352 416,331.3 256,160 96,331.3 115.3,352 256,201.5 "></polygon>
+            </svg>
+          </div>
+          <input id="language" type="hidden" name="language" />
+          <ul class="popup__dropdown-menu">
+            <li class="dropdown-menu__item" id="russian">Russian</li>
+            <li class="dropdown-menu__item" id="english">English</li>
+          </ul>
+        </div>
+      </div>
+      <label for="upload-file" class="popup__upload">
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="40" height="40" rx="20" fill="#F2F4F7"></rect>
+          <path
+            d="M19.6667 26.3333L23.0001 23M23.0001 23L26.3334 26.3333M23.0001 23V30.5M29.6667 26.9524C30.6847 26.1117 31.3334 24.8399 31.3334 23.4167C31.3334 20.8854 29.2814 18.8333 26.7501 18.8333C26.568 18.8333 26.3976 18.7383 26.3052 18.5814C25.2185 16.7374 23.2121 15.5 20.9167 15.5C17.465 15.5 14.6667 18.2982 14.6667 21.75C14.6667 23.4718 15.363 25.0309 16.4892 26.1613"
+            stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect class="popup__upload-icon" x="3" y="3" width="40" height="40" rx="20" stroke="#F9FAFB" stroke-width="6">
+          </rect>
+        </svg>
+        <p class="popup__upload-heading">
+          <span class="popup__upload-heading-stroke">Click to upload</span> or
+          drag and drop file
+        </p>
+        <input type="file" name="file" id="upload-file" style="display: none" />
+      </label>
+      <div class="popup__upload-file-list"></div>
+      <div class="popup__group popup__group--center">
+        <button class="popup__cancel-btn">Cancel</button>
+        <button class="popup__confirm-btn popup__confirm-btn--purple">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
