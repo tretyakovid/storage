@@ -1,4 +1,4 @@
-# https://tretyakovid.github.io/storage/)https://tretyakovid.github.io/storage/
+# https://tretyakovid.github.io/storage/
 ## 🔭 Done :
 
 1) The function to add/remove files has been created
